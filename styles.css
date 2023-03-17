@@ -20,6 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .flex-column {
@@ -331,6 +332,7 @@ footer div {
   font-size: 1rem;
   font-weight: 500;
   animation: move-right 35s infinite;
+  z-index: 5;
 }
 footer span {
   color: rgb(0, 0, 0);
@@ -369,5 +371,22 @@ footer span {
   }
   100% {
     transform: scale(1.1);
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    height: 100%;
+  }
+  .container-box {
+    flex-direction: column;
+  }
+  .container-box {
+    margin-bottom: 4rem;
+  }
+
+  .box {
+    width: 36vmin;
+    height: 44vmin;
   }
 }
